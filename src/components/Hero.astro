@@ -2,53 +2,41 @@
 ---
 
 <section class="hero">
+	<div class="hero-bg"></div>
 	<div class="hero-inner">
 		<div class="hero-content">
-			<div class="hero-subtitle">
-				Consultor TIC /<br />
-				Desarrollo Web /<br />
-				Soluciones Digitales
+			<div class="hero-subtitle animate-subtitle">
+				Plataformas & APPs /<br />
+				Ecosistemas DTI /<br />
+				Liderazgo & Partners /
 			</div>
-			<h1 class="hero-title">
+			<h1 class="hero-title animate-title">
 				TECNOLOGÍA<br />
 				QUE RESUELVE<br />
 				PROBLEMAS<span class="hero-title-accent">.</span>
 			</h1>
-			<p class="hero-description">
-				Estrategia, desarrollo y consultoría para convertir ideas en soluciones digitales útiles y sostenibles.
-			</p>
-			<a href="#proyectos" class="cta-button">
-				Ver mis proyectos <span class="arrow">→</span>
-			</a>
+			<p class="hero-description typewriter-text" id="typewriter"></p>
+			<div class="animate-cta">
+				<a href="#proyectos" class="cta-button">
+					Ver mis proyectos <span class="arrow">→</span>
+				</a>
+			</div>
 		</div>
-		<div class="hero-visual">
+		<div class="hero-visual animate-visual">
 			<img src="/images/logo-king.png" alt="" class="hero-king" />
-			<div class="hero-handwritten">
-				Ideas →<br />
-				Código →<br />
-				Resultados
-			</div>
-			<div class="hero-tags">
-				<span>Web</span>
-				<span>Aplicaciones</span>
-				<span>Automatización</span>
-				<span>Consultoría</span>
-			</div>
-			<div class="hero-blue-box">
-				Tecnología<br />
-				Personas<br />
-				Proyectos<br />
-				Impacto
-			</div>
+			<img src="/images/ruben-img-hero.png" alt="Rubén Carmona" class="hero-photo" />
 			<img src="/images/logo-line.png" alt="" class="hero-line" />
 		</div>
 	</div>
-	<div class="hero-contact-bar">
+	<div class="hero-contact-bar animate-contact-bar">
 		<a href="mailto:mort4delo@gmail.com" class="hero-contact-item">
 			<span class="icon">✉</span> mort4delo@gmail.com
 		</a>
 		<a href="tel:+34657655482" class="hero-contact-item">
 			<span class="icon">☎</span> +34 657 655 482
+		</a>
+		<a href="https://www.linkedin.com/in/rubén-carmona-domínguez-17a10323/" target="_blank" rel="noopener" class="hero-contact-item">
+			<span class="icon">in</span> LinkedIn
 		</a>
 		<span class="hero-contact-item">
 			Disponible para nuevos proyectos <span class="arrow">→</span>
@@ -58,22 +46,46 @@
 
 <style>
 	.hero {
-		min-height: 100vh;
-		padding-top: 80px;
+		position: relative;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('/images/bg-vertical-black.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 0;
 	}
 
 	.hero-inner {
+		position: relative;
+		z-index: 1;
 		flex: 1;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
+		grid-template-columns: 1.2fr 0.8fr;
+		gap: 3rem;
 		align-items: center;
-		padding: 4rem 2rem;
-		max-width: 1400px;
+		padding: 5rem 3rem 2rem;
+		max-width: 1600px;
 		margin: 0 auto;
 		width: 100%;
+		min-height: 0;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1.5rem;
 	}
 
 	.hero-subtitle {
@@ -81,16 +93,21 @@
 		font-size: var(--font-size-sm);
 		color: var(--color-text-light-muted);
 		letter-spacing: 0.04em;
-		margin-bottom: 2rem;
 		line-height: 1.8;
+		opacity: 0;
+		transform: translateY(30px);
+		animation: fadeInUp 0.6s ease-out 0.2s forwards;
 	}
 
 	.hero-title {
 		font-family: var(--font-display);
 		font-weight: 700;
-		font-size: var(--font-size-display);
-		line-height: 0.95;
-		margin-bottom: 2rem;
+		font-size: clamp(3rem, 8vw, 7rem);
+		line-height: 0.9;
+		letter-spacing: -0.02em;
+		opacity: 0;
+		transform: translateY(40px);
+		animation: fadeInUp 0.7s ease-out 0.4s forwards;
 	}
 
 	.hero-title-accent {
@@ -100,86 +117,161 @@
 	.hero-description {
 		font-size: var(--font-size-md);
 		color: var(--color-text-light-muted);
-		max-width: 400px;
-		margin-bottom: 2rem;
+		max-width: 450px;
 		line-height: 1.6;
+		min-height: 1.6em;
+	}
+
+	.typewriter-cursor {
+		display: inline-block;
+		width: 2px;
+		height: 1em;
+		background-color: var(--color-acid);
+		margin-left: 2px;
+		animation: blink 0.8s infinite;
+		vertical-align: text-bottom;
+	}
+
+	@keyframes blink {
+		0%, 50% {
+			opacity: 1;
+		}
+		51%, 100% {
+			opacity: 0;
+		}
+	}
+
+	.animate-cta {
+		opacity: 0;
+		transform: translateY(30px);
+		animation: fadeInUp 0.6s ease-out 0.8s forwards;
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		padding: 0.75rem 1.5rem;
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+		border: none;
+		cursor: pointer;
+		transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+	}
+
+	.cta-button:hover {
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+		transform: translate(-2px, -2px);
+		box-shadow: 4px 4px 0 var(--color-electric-blue);
+	}
+
+	.cta-button .arrow {
+		transition: transform var(--transition-fast);
+	}
+
+	.cta-button:hover .arrow {
+		transform: translateX(4px);
 	}
 
 	.hero-visual {
 		position: relative;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		min-height: 500px;
+		align-items: flex-end;
+		height: 100%;
+		max-height: 85vh;
+		opacity: 0;
+		transform: translateX(50px);
+		animation: fadeInRight 0.8s ease-out 0.5s forwards;
+	}
+
+	.hero-photo {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: bottom center;
+		max-width: 550px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.hero-king {
 		position: absolute;
-		top: -20px;
-		right: 20%;
-		width: 60px;
-		height: 60px;
-		opacity: 0.3;
+		top: -10px;
+		left: 50%;
+		transform: translateX(-50%) scale(0);
+		width: 80px;
+		height: auto;
+		z-index: 2;
+		opacity: 0;
 	}
 
-	.hero-handwritten {
-		font-family: var(--font-display);
-		font-size: var(--font-size-xl);
-		color: var(--color-text-light);
-		transform: rotate(3deg);
-		position: absolute;
-		top: 10%;
-		right: 5%;
-		line-height: 1.4;
+	.hero-king.animate {
+		animation: kingDrop 0.5s ease-out 1.5s forwards;
 	}
 
-	.hero-tags {
-		position: absolute;
-		bottom: 20%;
-		right: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.hero-tags span {
-		font-family: var(--font-body);
-		font-size: var(--font-size-xs);
-		color: var(--color-text-light-muted);
-		letter-spacing: 0.04em;
-	}
-
-	.hero-blue-box {
-		position: absolute;
-		bottom: 10%;
-		right: 15%;
-		background-color: var(--color-electric-blue);
-		color: var(--color-white);
-		font-family: var(--font-body);
-		font-size: var(--font-size-sm);
-		font-weight: 700;
-		padding: 1rem 1.5rem;
-		transform: rotate(-2deg);
-		line-height: 1.6;
+	@keyframes kingDrop {
+		0% {
+			opacity: 0;
+			transform: translateX(-50%) scale(0) rotate(-15deg);
+		}
+		60% {
+			opacity: 1;
+			transform: translateX(-50%) scale(1.1) rotate(3deg);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(-50%) scale(1) rotate(0deg);
+		}
 	}
 
 	.hero-line {
 		position: absolute;
 		bottom: 5%;
-		left: 10%;
-		width: 200px;
-		opacity: 0.6;
+		left: 50%;
+		transform: translateX(-50%) scaleX(0);
+		width: 70%;
+		max-width: 300px;
+		z-index: 2;
+		opacity: 0;
+	}
+
+	.hero-line.animate {
+		animation: lineExpand 0.6s ease-out 1.8s forwards;
+	}
+
+	@keyframes lineExpand {
+		0% {
+			opacity: 0;
+			transform: translateX(-50%) scaleX(0);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(-50%) scaleX(1);
+		}
 	}
 
 	.hero-contact-bar {
+		position: relative;
+		z-index: 1;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1.5rem 2rem;
+		padding: 1rem 3rem;
 		border-top: 1px solid rgba(242, 240, 234, 0.1);
-		max-width: 1400px;
+		max-width: 1600px;
 		margin: 0 auto;
 		width: 100%;
+		flex-shrink: 0;
+		opacity: 0;
+		transform: translateY(20px);
+		animation: fadeInUp 0.6s ease-out 1s forwards;
 	}
 
 	.hero-contact-item {
@@ -189,6 +281,7 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		transition: color var(--transition-fast);
 	}
 
 	.hero-contact-item:hover {
@@ -203,45 +296,116 @@
 		margin-left: 0.5rem;
 	}
 
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeInRight {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
 	@media (max-width: 900px) {
 		.hero-inner {
 			grid-template-columns: 1fr;
 			gap: 2rem;
-			padding: 2rem 1rem;
+			padding: 5rem 2rem 1.5rem;
 		}
 
 		.hero-visual {
-			min-height: 300px;
+			max-height: 400px;
 			order: -1;
 		}
 
-		.hero-title {
-			font-size: var(--font-size-3xl);
+		.hero-photo {
+			max-width: 350px;
 		}
 
-		.hero-handwritten {
-			font-size: var(--font-size-lg);
+		.hero-king {
+			width: 60px;
+		}
+
+		.hero-line {
+			width: 60%;
+			max-width: 200px;
+		}
+
+		.hero-title {
+			font-size: clamp(2.5rem, 10vw, 4rem);
 		}
 
 		.hero-contact-bar {
 			flex-direction: column;
-			gap: 1rem;
-			padding: 1rem;
+			gap: 0.75rem;
+			padding: 1rem 2rem;
 		}
 	}
 
 	@media (max-width: 600px) {
 		.hero-title {
-			font-size: var(--font-size-2xl);
+			font-size: clamp(2rem, 12vw, 3rem);
 		}
 
 		.hero-visual {
-			min-height: 200px;
+			max-height: 300px;
 		}
 
-		.hero-blue-box {
-			font-size: var(--font-size-xs);
-			padding: 0.75rem 1rem;
+		.hero-photo {
+			max-width: 250px;
+		}
+
+		.hero-king {
+			width: 40px;
+		}
+
+		.hero-line {
+			width: 50%;
+			max-width: 150px;
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const text = 'Impulsando la digitalización integral de destinos turísticos, administraciones públicas y grandes cuentas corporativas';
+		const element = document.getElementById('typewriter');
+		if (!element) return;
+
+		const speed = 35;
+		let index = 0;
+
+		function type() {
+			if (index < text.length) {
+				element.innerHTML = text.substring(0, index + 1) + '<span class="typewriter-cursor"></span>';
+				index++;
+				setTimeout(type, speed);
+			} else {
+				element.textContent = text;
+			}
+		}
+
+		setTimeout(type, 1200);
+
+		const king = document.querySelector('.hero-king');
+		const line = document.querySelector('.hero-line');
+		if (king && line) {
+			setTimeout(() => {
+				king.classList.add('animate');
+				line.classList.add('animate');
+			}, 100);
+		}
+	});
+</script>
