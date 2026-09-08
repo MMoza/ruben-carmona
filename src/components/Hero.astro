@@ -1,0 +1,245 @@
+---
+---
+
+<section class="hero">
+	<div class="hero-inner">
+		<div class="hero-content">
+			<div class="hero-subtitle">
+				Consultor TIC /<br />
+				Desarrollo Web /<br />
+				Soluciones Digitales
+			</div>
+			<h1 class="hero-title">
+				Tecnología<br />
+				que resuelve<br />
+				problemas<span class="hero-title-accent">.</span>
+			</h1>
+			<p class="hero-description">
+				Estrategia, desarrollo y consultoría para convertir ideas en soluciones digitales útiles y sostenibles.
+			</p>
+			<a href="#proyectos" class="cta-button">
+				Ver mis proyectos <span class="arrow">→</span>
+			</a>
+		</div>
+		<div class="hero-visual">
+			<img src="/images/logo-king.png" alt="" class="hero-king" />
+			<div class="hero-handwritten">
+				Ideas →<br />
+				Código →<br />
+				Resultados
+			</div>
+			<div class="hero-tags">
+				<span>Web</span>
+				<span>Aplicaciones</span>
+				<span>Automatización</span>
+				<span>Consultoría</span>
+			</div>
+			<div class="hero-blue-box">
+				Tecnología<br />
+				Personas<br />
+				Proyectos<br />
+				Impacto
+			</div>
+			<img src="/images/logo-line.png" alt="" class="hero-line" />
+		</div>
+	</div>
+	<div class="hero-contact-bar">
+		<a href="mailto:mort4delo@gmail.com" class="hero-contact-item">
+			<span class="icon">✉</span> mort4delo@gmail.com
+		</a>
+		<a href="tel:+34657655482" class="hero-contact-item">
+			<span class="icon">☎</span> +34 657 655 482
+		</a>
+		<span class="hero-contact-item">
+			Disponible para nuevos proyectos <span class="arrow">→</span>
+		</span>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		padding-top: 80px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-inner {
+		flex: 1;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		padding: 4rem 2rem;
+		max-width: 1400px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.hero-subtitle {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		letter-spacing: 0.04em;
+		margin-bottom: 2rem;
+		line-height: 1.8;
+	}
+
+	.hero-title {
+		font-size: var(--font-size-display);
+		line-height: 0.95;
+		margin-bottom: 2rem;
+	}
+
+	.hero-title-accent {
+		color: var(--color-acid);
+	}
+
+	.hero-description {
+		font-size: var(--font-size-md);
+		color: var(--color-text-light-muted);
+		max-width: 400px;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.hero-visual {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 500px;
+	}
+
+	.hero-king {
+		position: absolute;
+		top: -20px;
+		right: 20%;
+		width: 60px;
+		height: 60px;
+		opacity: 0.3;
+	}
+
+	.hero-handwritten {
+		font-family: var(--font-display);
+		font-size: var(--font-size-xl);
+		color: var(--color-text-light);
+		transform: rotate(3deg);
+		position: absolute;
+		top: 10%;
+		right: 5%;
+		line-height: 1.4;
+	}
+
+	.hero-tags {
+		position: absolute;
+		bottom: 20%;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.hero-tags span {
+		font-family: var(--font-body);
+		font-size: var(--font-size-xs);
+		color: var(--color-text-light-muted);
+		letter-spacing: 0.04em;
+	}
+
+	.hero-blue-box {
+		position: absolute;
+		bottom: 10%;
+		right: 15%;
+		background-color: var(--color-electric-blue);
+		color: var(--color-white);
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		padding: 1rem 1.5rem;
+		transform: rotate(-2deg);
+		line-height: 1.6;
+	}
+
+	.hero-line {
+		position: absolute;
+		bottom: 5%;
+		left: 10%;
+		width: 200px;
+		opacity: 0.6;
+	}
+
+	.hero-contact-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 2rem;
+		border-top: 1px solid rgba(242, 240, 234, 0.1);
+		max-width: 1400px;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.hero-contact-item {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.hero-contact-item:hover {
+		color: var(--color-acid);
+	}
+
+	.hero-contact-item .icon {
+		font-size: var(--font-size-lg);
+	}
+
+	.hero-contact-item .arrow {
+		margin-left: 0.5rem;
+	}
+
+	@media (max-width: 900px) {
+		.hero-inner {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+			padding: 2rem 1rem;
+		}
+
+		.hero-visual {
+			min-height: 300px;
+			order: -1;
+		}
+
+		.hero-title {
+			font-size: var(--font-size-3xl);
+		}
+
+		.hero-handwritten {
+			font-size: var(--font-size-lg);
+		}
+
+		.hero-contact-bar {
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero-title {
+			font-size: var(--font-size-2xl);
+		}
+
+		.hero-visual {
+			min-height: 200px;
+		}
+
+		.hero-blue-box {
+			font-size: var(--font-size-xs);
+			padding: 0.75rem 1rem;
+		}
+	}
+</style>

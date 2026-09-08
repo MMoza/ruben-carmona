@@ -1,0 +1,183 @@
+---
+---
+
+<section id="sobre-mi" class="about section-light">
+	<div class="container">
+		<div class="about-inner">
+			<div class="about-content">
+				<span class="section-number">// 02</span>
+				<h2 class="section-title">Sobre mí</h2>
+				<p class="about-description">
+					Consultor TIC con experiencia en tecnología, gestión y dirección. Me interesa convertir necesidades reales en soluciones digitales útiles, claras y mantenibles.
+				</p>
+				<div class="about-highlights">
+					<span class="highlight">Liderazgo</span>
+					<span class="highlight">Gestión</span>
+					<span class="highlight">Tecnología</span>
+					<span class="highlight">Visión de negocio</span>
+				</div>
+			</div>
+			<div class="about-visual">
+				<div class="about-photo-placeholder">
+					<span class="about-photo-text">Foto<br />Rubén</span>
+				</div>
+				<div class="about-handwritten">
+					Aprender<br />
+					Construir<br />
+					Mejorar<br />
+					Siempre
+				</div>
+				<div class="about-blue-box">
+					Mis herramientas<br />
+					favoritas son<br />
+					la curiosidad<br />
+					y el sentido común.
+				</div>
+				<img src="/images/logo-line.png" alt="" class="about-line" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		padding: 6rem 0;
+	}
+
+	.about-inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-description {
+		font-size: var(--font-size-md);
+		color: var(--color-text-dark-muted);
+		line-height: 1.8;
+		margin-bottom: 2rem;
+		max-width: 450px;
+	}
+
+	.about-highlights {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.highlight {
+		display: inline-block;
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+		padding: 0.5rem 1rem;
+		width: fit-content;
+	}
+
+	.about-visual {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 400px;
+	}
+
+	.about-photo-placeholder {
+		width: 300px;
+		height: 400px;
+		background-color: var(--color-surface-dark);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	.about-photo-text {
+		font-family: var(--font-display);
+		font-size: var(--font-size-xl);
+		color: var(--color-text-light-muted);
+		text-align: center;
+		line-height: 1.4;
+	}
+
+	.about-photo-placeholder::after {
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		right: -20px;
+		bottom: -20px;
+		border: 2px solid var(--color-electric-blue);
+		z-index: -1;
+	}
+
+	.about-handwritten {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		font-family: var(--font-display);
+		font-size: var(--font-size-lg);
+		color: var(--color-text-dark);
+		transform: rotate(3deg);
+		line-height: 1.4;
+	}
+
+	.about-blue-box {
+		position: absolute;
+		bottom: 5%;
+		right: 0;
+		background-color: var(--color-text-dark);
+		color: var(--color-text-light);
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		padding: 1rem 1.5rem;
+		transform: rotate(-2deg);
+		line-height: 1.6;
+	}
+
+	.about-line {
+		position: absolute;
+		bottom: 15%;
+		left: 5%;
+		width: 150px;
+		opacity: 0.5;
+	}
+
+	@media (max-width: 900px) {
+		.about-inner {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.about-visual {
+			order: -1;
+			min-height: 300px;
+		}
+
+		.about-photo-placeholder {
+			width: 250px;
+			height: 300px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.about {
+			padding: 4rem 0;
+		}
+
+		.about-photo-placeholder {
+			width: 200px;
+			height: 250px;
+		}
+
+		.about-blue-box {
+			font-size: var(--font-size-xs);
+			padding: 0.75rem 1rem;
+		}
+	}
+</style>

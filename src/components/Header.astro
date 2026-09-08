@@ -1,0 +1,128 @@
+---
+---
+
+<header class="header">
+	<div class="header-inner">
+		<a href="/" class="logo">
+			<img src="/images/logo-king.png" alt="" class="logo-king" />
+			<img src="/images/logo-ruben-whitout-background.png" alt="Rubén Carmona" class="logo-text" />
+		</a>
+		<nav class="nav">
+			<a href="#proyectos">Proyectos</a>
+			<a href="#sobre-mi">Sobre mí</a>
+			<a href="#experiencia">Experiencia</a>
+			<a href="#formacion">Formación</a>
+			<a href="#contacto">Contacto</a>
+		</nav>
+		<a href="#contacto" class="cta-header">
+			Hagamos algo grande <span class="arrow">→</span>
+		</a>
+	</div>
+</header>
+
+<style>
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		padding: 1rem 2rem;
+		background-color: rgba(9, 9, 9, 0.9);
+		border-bottom: 1px solid rgba(242, 240, 234, 0.1);
+	}
+
+	.header-inner {
+		max-width: 1400px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+	}
+
+	.logo-king {
+		width: 24px;
+		height: 24px;
+	}
+
+	.logo-text {
+		height: 40px;
+		width: auto;
+	}
+
+	.nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav a {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--color-text-light-muted);
+		transition: color var(--transition-fast);
+	}
+
+	.nav a:hover {
+		color: var(--color-acid);
+	}
+
+	.cta-header {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		padding: 0.75rem 1.5rem;
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-shrink: 0;
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+	}
+
+	.cta-header:hover {
+		transform: translate(-2px, -2px);
+		box-shadow: 4px 4px 0 var(--color-electric-blue);
+	}
+
+	.cta-header .arrow {
+		transition: transform var(--transition-fast);
+	}
+
+	.cta-header:hover .arrow {
+		transform: translateX(4px);
+	}
+
+	@media (max-width: 900px) {
+		.nav {
+			display: none;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.header {
+			padding: 0.75rem 1rem;
+		}
+
+		.logo-text {
+			height: 30px;
+		}
+
+		.cta-header {
+			padding: 0.5rem 1rem;
+			font-size: var(--font-size-xs);
+		}
+	}
+</style>

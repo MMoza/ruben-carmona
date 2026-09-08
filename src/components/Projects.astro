@@ -1,0 +1,217 @@
+---
+---
+
+<section id="proyectos" class="projects section-dark">
+	<div class="container">
+		<div class="projects-header">
+			<div>
+				<span class="section-number">// 01</span>
+				<h2 class="section-title">Proyectos / Soluciones</h2>
+			</div>
+			<div class="projects-header-right">
+				<p class="projects-tagline">Tecnología<br />para un mundo<br />más práctico.</p>
+				<a href="#proyectos" class="cta-link">
+					Ver todos <span class="arrow">→</span>
+				</a>
+			</div>
+		</div>
+		<div class="projects-grid">
+			<article class="project-card">
+				<div class="project-image project-image-acid">
+					<div class="project-image-content">
+						<span class="project-image-text">Fantasy<br />Sports<br />Data<br />Users</span>
+					</div>
+				</div>
+				<h3 class="project-title">Aplicaciones Web</h3>
+				<p class="project-description">Desarrollo de aplicaciones web a medida, PHP, bases de datos y experiencias para usuarios reales.</p>
+				<div class="project-tags">
+					<span class="tag">#php</span>
+					<span class="tag">#web</span>
+					<span class="tag">#deporte</span>
+					<span class="tag">#datos</span>
+				</div>
+			</article>
+			<article class="project-card">
+				<div class="project-image project-image-dark">
+					<div class="project-image-content">
+						<span class="project-image-text">Dashboard<br />Analytics</span>
+					</div>
+				</div>
+				<h3 class="project-title">Gestión y ERP</h3>
+				<p class="project-description">Soluciones de gestión, ERP y herramientas internas para optimizar procesos y equipos.</p>
+				<div class="project-tags">
+					<span class="tag">#erp</span>
+					<span class="tag">#crm</span>
+					<span class="tag">#procesos</span>
+					<span class="tag">#automatización</span>
+				</div>
+			</article>
+			<article class="project-card">
+				<div class="project-image project-image-dark">
+					<div class="project-image-content">
+						<span class="project-image-text">Corporate<br />Web</span>
+					</div>
+				</div>
+				<h3 class="project-title">Webs Corporativas</h3>
+				<p class="project-description">Diseño y desarrollo de sitios corporativos, CMS, SEO y una imagen que transmite confianza.</p>
+				<div class="project-tags">
+					<span class="tag">#cms</span>
+					<span class="tag">#diseño</span>
+					<span class="tag">#seo</span>
+					<span class="tag">#empresa</span>
+				</div>
+			</article>
+			<article class="project-card">
+				<div class="project-image project-image-acid">
+					<div class="project-image-content">
+						<span class="project-image-text">Automate<br />Simplify<br />Improve</span>
+					</div>
+				</div>
+				<h3 class="project-title">Automatización</h3>
+				<p class="project-description">Integraciones, scripts y automatización de tareas para ahorrar tiempo y evitar errores.</p>
+				<div class="project-tags">
+					<span class="tag">#integraciones</span>
+					<span class="tag">#scripts</span>
+					<span class="tag">#apis</span>
+				</div>
+			</article>
+		</div>
+	</div>
+</section>
+
+<style>
+	.projects {
+		padding: 6rem 0;
+	}
+
+	.projects-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 3rem;
+		gap: 2rem;
+	}
+
+	.projects-header-right {
+		text-align: right;
+	}
+
+	.projects-tagline {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	.cta-link {
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: var(--color-acid);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: gap var(--transition-fast);
+	}
+
+	.cta-link:hover {
+		gap: 1rem;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+
+	.project-card {
+		border: 1px solid rgba(242, 240, 234, 0.15);
+		transition: border-color var(--transition-fast);
+	}
+
+	.project-card:hover {
+		border-color: var(--color-acid);
+	}
+
+	.project-image {
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.project-image-acid {
+		background-color: var(--color-acid);
+	}
+
+	.project-image-dark {
+		background-color: var(--color-surface-dark);
+	}
+
+	.project-image-content {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project-image-text {
+		font-family: var(--font-display);
+		font-size: var(--font-size-xl);
+		line-height: 1.1;
+	}
+
+	.project-image-acid .project-image-text {
+		color: var(--color-text-dark);
+	}
+
+	.project-image-dark .project-image-text {
+		color: var(--color-text-light-muted);
+	}
+
+	.project-title {
+		font-size: var(--font-size-xl);
+		padding: 1rem 1rem 0.5rem;
+	}
+
+	.project-description {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		padding: 0 1rem;
+		line-height: 1.6;
+	}
+
+	.project-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		padding: 1rem;
+	}
+
+	@media (max-width: 1000px) {
+		.projects-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 600px) {
+		.projects {
+			padding: 4rem 0;
+		}
+
+		.projects-header {
+			flex-direction: column;
+		}
+
+		.projects-header-right {
+			text-align: left;
+		}
+
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
