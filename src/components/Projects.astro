@@ -6,12 +6,12 @@
 		<div class="projects-header">
 			<div>
 				<span class="section-number">// 01</span>
-				<h2 class="section-title">Proyectos / Soluciones</h2>
+				<h2 class="section-title">PROYECTOS / SOLUCIONES</h2>
 			</div>
 			<div class="projects-header-right">
-				<p class="projects-tagline">Tecnología<br />para un mundo<br />más práctico.</p>
+				<p class="projects-tagline">TECNOLOGÍA<br />PARA UN MUNDO<br />MÁS PRÁCTICO.</p>
 				<a href="#proyectos" class="cta-link">
-					Ver todos <span class="arrow">→</span>
+					VER TODOS <span class="arrow">→</span>
 				</a>
 			</div>
 		</div>
@@ -19,10 +19,10 @@
 			<article class="project-card">
 				<div class="project-image project-image-acid">
 					<div class="project-image-content">
-						<span class="project-image-text">Fantasy<br />Sports<br />Data<br />Users</span>
+						<span class="project-image-text">FANTASY<br />SPORTS<br />DATA<br />USERS</span>
 					</div>
 				</div>
-				<h3 class="project-title">Aplicaciones Web</h3>
+				<h3 class="project-title">APLICACIONES WEB</h3>
 				<p class="project-description">Desarrollo de aplicaciones web a medida, PHP, bases de datos y experiencias para usuarios reales.</p>
 				<div class="project-tags">
 					<span class="tag">#php</span>
@@ -34,10 +34,10 @@
 			<article class="project-card">
 				<div class="project-image project-image-dark">
 					<div class="project-image-content">
-						<span class="project-image-text">Dashboard<br />Analytics</span>
+						<span class="project-image-text">DASHBOARD<br />ANALYTICS</span>
 					</div>
 				</div>
-				<h3 class="project-title">Gestión y ERP</h3>
+				<h3 class="project-title">GESTIÓN Y ERP</h3>
 				<p class="project-description">Soluciones de gestión, ERP y herramientas internas para optimizar procesos y equipos.</p>
 				<div class="project-tags">
 					<span class="tag">#erp</span>
@@ -49,10 +49,10 @@
 			<article class="project-card">
 				<div class="project-image project-image-dark">
 					<div class="project-image-content">
-						<span class="project-image-text">Corporate<br />Web</span>
+						<span class="project-image-text">CORPORATE<br />WEB</span>
 					</div>
 				</div>
-				<h3 class="project-title">Webs Corporativas</h3>
+				<h3 class="project-title">WEBS CORPORATIVAS</h3>
 				<p class="project-description">Diseño y desarrollo de sitios corporativos, CMS, SEO y una imagen que transmite confianza.</p>
 				<div class="project-tags">
 					<span class="tag">#cms</span>
@@ -64,10 +64,10 @@
 			<article class="project-card">
 				<div class="project-image project-image-acid">
 					<div class="project-image-content">
-						<span class="project-image-text">Automate<br />Simplify<br />Improve</span>
+						<span class="project-image-text">AUTOMATE<br />SIMPLIFY<br />IMPROVE</span>
 					</div>
 				</div>
-				<h3 class="project-title">Automatización</h3>
+				<h3 class="project-title">AUTOMATIZACIÓN</h3>
 				<p class="project-description">Integraciones, scripts y automatización de tareas para ahorrar tiempo y evitar errores.</p>
 				<div class="project-tags">
 					<span class="tag">#integraciones</span>
@@ -81,15 +81,26 @@
 
 <style>
 	.projects {
-		padding: 6rem 0;
+		padding: 5rem 2rem;
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
 	.projects-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
-		margin-bottom: 3rem;
+		margin-bottom: 2.5rem;
 		gap: 2rem;
+	}
+
+	.projects .section-title {
+		font-family: var(--font-display);
+		font-size: clamp(3rem, 6vw, 5rem);
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: -0.02em;
 	}
 
 	.projects-header-right {
@@ -99,14 +110,16 @@
 	.projects-tagline {
 		font-family: var(--font-body);
 		font-size: var(--font-size-sm);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
 		color: var(--color-text-light-muted);
 		line-height: 1.6;
 		margin-bottom: 1rem;
 	}
 
 	.cta-link {
-		font-family: var(--font-body);
-		font-size: var(--font-size-sm);
+		font-family: var(--font-display);
+		font-size: var(--font-size-md);
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
@@ -122,9 +135,29 @@
 	}
 
 	.projects-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1.5rem;
+		display: flex;
+		gap: 1rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		padding-bottom: 1rem;
+	}
+
+	.projects-grid::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.projects-grid::-webkit-scrollbar-track {
+		background: var(--color-surface-dark);
+	}
+
+	.projects-grid::-webkit-scrollbar-thumb {
+		background: var(--color-text-light-muted);
+	}
+
+	.project-card {
+		flex: 0 0 280px;
+		scroll-snap-align: start;
 	}
 
 	.project-card {
@@ -160,7 +193,9 @@
 
 	.project-image-text {
 		font-family: var(--font-display);
-		font-size: var(--font-size-xl);
+		font-size: var(--font-size-lg);
+		font-weight: 700;
+		text-transform: uppercase;
 		line-height: 1.1;
 	}
 
@@ -173,33 +208,30 @@
 	}
 
 	.project-title {
-		font-size: var(--font-size-xl);
-		padding: 1rem 1rem 0.5rem;
+		font-family: var(--font-display);
+		font-size: var(--font-size-lg);
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 0.75rem 0.75rem 0.25rem;
 	}
 
 	.project-description {
 		font-size: var(--font-size-sm);
 		color: var(--color-text-light-muted);
-		padding: 0 1rem;
-		line-height: 1.6;
+		padding: 0 0.75rem;
+		line-height: 1.5;
 	}
 
 	.project-tags {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
-		padding: 1rem;
-	}
-
-	@media (max-width: 1000px) {
-		.projects-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		gap: 0.4rem;
+		padding: 0.75rem;
 	}
 
 	@media (max-width: 600px) {
 		.projects {
-			padding: 4rem 0;
+			padding: 3rem 1rem;
 		}
 
 		.projects-header {
@@ -210,8 +242,8 @@
 			text-align: left;
 		}
 
-		.projects-grid {
-			grid-template-columns: 1fr;
+		.project-card {
+			flex: 0 0 240px;
 		}
 	}
 </style>
