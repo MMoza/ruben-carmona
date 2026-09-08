@@ -2,6 +2,7 @@
 ---
 
 <section id="proyectos" class="projects section-dark">
+	<div class="projects-overlay"></div>
 	<div class="container">
 		<div class="projects-header">
 			<div>
@@ -77,13 +78,63 @@
 			</article>
 		</div>
 	</div>
+	<img src="/images/separator-yellow.png" alt="" class="projects-separator projects-separator-bottom" />
 </section>
 
 <style>
 	.projects {
-		padding: 5rem 2rem;
+		position: relative;
+		padding: 0;
+		background-image: url('/images/bg-projects.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.projects-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(9, 9, 9, 0.85) 0%,
+			rgba(9, 9, 9, 0.75) 50%,
+			rgba(9, 9, 9, 0.85) 100%
+		);
+		z-index: 0;
+	}
+
+	.projects .container {
+		position: relative;
+		z-index: 1;
 		max-width: 1400px;
 		margin: 0 auto;
+		padding: 5rem 2rem;
+	}
+
+	.projects-separator {
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		max-width: 1600px;
+		opacity: 0.9;
+		z-index: 10;
+		pointer-events: none;
+	}
+
+	.projects-separator-bottom {
+		bottom: 0;
+		transform: translate(-50%, 50%);
+	}
+
+	.projects-separator-top {
+		top: -240px;
+	}
+
+	.projects-separator-bottom {
+		bottom: -12px;
 	}
 
 	.projects-header {
@@ -230,7 +281,7 @@
 	}
 
 	@media (max-width: 600px) {
-		.projects {
+		.projects .container {
 			padding: 3rem 1rem;
 		}
 
