@@ -174,7 +174,7 @@
 		position: relative;
 		width: 300px;
 		height: 400px;
-		transform: rotate(-3deg);
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 	}
 
 	.about-photo-frame {
@@ -183,9 +183,20 @@
 		left: 20px;
 		right: -20px;
 		bottom: -20px;
-		border: 2px solid var(--color-electric-blue);
-		background-color: var(--color-electric-blue);
+		border: 2px solid transparent;
+		background-color: transparent;
 		z-index: -1;
+		transition: background-color var(--transition-fast), border-color var(--transition-fast);
+	}
+
+	.about-photo-wrapper:hover {
+		transform: translate(-2px, -2px) rotate(-3deg);
+		box-shadow: 6px 6px 0 var(--color-electric-blue);
+	}
+
+	.about-photo-wrapper:hover .about-photo-frame {
+		background-color: var(--color-electric-blue);
+		border-color: var(--color-electric-blue);
 	}
 
 	.about-photo-inner {
@@ -258,7 +269,6 @@
 		.about-photo-wrapper {
 			width: 250px;
 			height: 300px;
-			transform: rotate(-3deg);
 		}
 
 		.about-photo-frame {
@@ -277,7 +287,6 @@
 		.about-photo-wrapper {
 			width: 200px;
 			height: 250px;
-			transform: rotate(-3deg);
 		}
 
 		.about-photo-frame {
