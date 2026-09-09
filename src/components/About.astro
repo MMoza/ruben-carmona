@@ -11,12 +11,12 @@
 				<p class="about-description">
 					Consultor TIC con experiencia en tecnología, gestión y dirección. Me interesa convertir necesidades reales en soluciones digitales útiles, claras y mantenibles.
 				</p>
-				<div class="about-highlights">
-					<span class="highlight">Liderazgo</span>
-					<span class="highlight">Gestión</span>
-					<span class="highlight">Tecnología</span>
-					<span class="highlight">Visión de negocio</span>
-				</div>
+			<div class="about-highlights">
+				<span class="highlight highlight-acid">Liderazgo</span>
+				<span class="highlight highlight-dark">Gestión</span>
+				<span class="highlight highlight-blue">Tecnología</span>
+				<span class="highlight highlight-muted">Visión de negocio</span>
+			</div>
 			</div>
 			<div class="about-visual">
 				<div class="about-photo-wrapper">
@@ -93,21 +93,73 @@
 
 	.about-highlights {
 		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		align-items: center;
 	}
 
 	.highlight {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
 		font-family: var(--font-body);
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-xs);
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
+		padding: 0.5rem 1rem;
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+	}
+
+	.highlight-acid {
 		background-color: var(--color-acid);
 		color: var(--color-text-dark);
-		padding: 0.5rem 1rem;
-		width: fit-content;
+		transform: rotate(-2deg);
+	}
+
+	.highlight-acid:hover {
+		transform: translate(-2px, -2px) rotate(-2deg);
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+		box-shadow: 6px 6px 0 var(--color-acid);
+	}
+
+	.highlight-dark {
+		background-color: var(--color-text-dark);
+		color: var(--color-text-light);
+		transform: rotate(1.5deg);
+	}
+
+	.highlight-dark:hover {
+		transform: translate(-2px, -2px) rotate(1.5deg);
+		background-color: var(--color-text-light);
+		color: var(--color-text-dark);
+		box-shadow: 6px 6px 0 var(--color-text-dark);
+	}
+
+	.highlight-blue {
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+		transform: rotate(-1deg);
+	}
+
+	.highlight-blue:hover {
+		transform: translate(-2px, -2px) rotate(-1deg);
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+		box-shadow: 6px 6px 0 var(--color-electric-blue);
+	}
+
+	.highlight-muted {
+		background-color: var(--color-text-light-muted);
+		color: var(--color-text-dark);
+		transform: rotate(2deg);
+	}
+
+	.highlight-muted:hover {
+		transform: translate(-2px, -2px) rotate(2deg);
+		background-color: var(--color-text-dark);
+		color: var(--color-text-light);
+		box-shadow: 6px 6px 0 var(--color-text-light-muted);
 	}
 
 	.about-visual {
