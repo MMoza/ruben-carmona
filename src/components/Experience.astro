@@ -8,42 +8,59 @@
 				<span class="section-number">// 03</span>
 				<h2 class="section-title">EXPERIENCIA</h2>
 			</div>
-			<div class="experience-side">
-				<div class="experience-signs">
-					<span class="sign">Personas</span>
-					<span class="sign">Organización</span>
-					<span class="sign">Resultados</span>
-				</div>
-				<p class="experience-motto">
-					Distintos<br />
-					caminos<br />
-					misma actitud
-				</p>
-			</div>
 		</div>
 		<div class="experience-timeline">
+			<div class="timeline-item timeline-item-current">
+				<div class="timeline-dot"></div>
+				<div class="timeline-content">
+					<div class="timeline-header">
+						<h3 class="timeline-company">MisterPlan</h3>
+					</div>
+					<div class="timeline-role-row">
+						<p class="timeline-role">Partners Sales Manager</p>
+						<span class="timeline-badge">+16 años</span>
+					</div>
+					<p class="timeline-location">Cáceres, España • Desde 2010 hasta la actualidad</p>
+					<ul class="timeline-list">
+						<li>Coordinación de equipos de trabajo y departamento</li>
+						<li>Gestión y ejecución de proyectos</li>
+						<li>Gestión de grandes cuentas clientes</li>
+						<li>Marketing y diseño</li>
+					</ul>
+				</div>
+				<img src="/images/mr-plan-ruben.png" alt="MisterPlan Logo" class="timeline-logo" />
+			</div>
 			<div class="timeline-item">
 				<div class="timeline-dot"></div>
 				<div class="timeline-content">
 					<h3 class="timeline-company">Grupo Vinsa</h3>
-					<p class="timeline-role">Vigilante de Seguridad — Madrid</p>
-					<p class="timeline-description">Seguridad en FNAC Callao, El Corte Inglés Princesa y El Corte Inglés Barrio del Pilar.</p>
+					<div class="timeline-details">
+						<p class="timeline-role">Vigilante de Seguridad — Madrid</p>
+						<p class="timeline-description">Seguridad en FNAC Callao, El Corte Inglés Princesa y El Corte Inglés Barrio del Pilar.</p>
+					</div>
+					<button class="timeline-toggle">Ver más</button>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-dot"></div>
 				<div class="timeline-content">
 					<h3 class="timeline-company">Aldeasa</h3>
-					<p class="timeline-role">Responsable de Almacén, Tienda T3</p>
-					<p class="timeline-description">Aeropuerto Adolfo Suárez, Madrid. Gestión de personal, control de stock, distribución y logística.</p>
+					<div class="timeline-details">
+						<p class="timeline-role">Responsable de Almacén, Tienda T3</p>
+						<p class="timeline-description">Aeropuerto Adolfo Suárez, Madrid. Gestión de personal, control de stock, distribución y logística.</p>
+					</div>
+					<button class="timeline-toggle">Ver más</button>
 				</div>
 			</div>
 			<div class="timeline-item">
 				<div class="timeline-dot"></div>
 				<div class="timeline-content">
 					<h3 class="timeline-company">Factor Ocio</h3>
-					<p class="timeline-role">Director Comercial / Patrón de aguas intercontinentales</p>
-					<p class="timeline-description">Barco del Tajo, Cáceres. Dirección comercial y patrón de barco para 80 pasajeros.</p>
+					<div class="timeline-details">
+						<p class="timeline-role">Director Comercial / Patrón de aguas intercontinentales</p>
+						<p class="timeline-description">Barco del Tajo, Cáceres. Dirección comercial y patrón de barco para 80 pasajeros.</p>
+					</div>
+					<button class="timeline-toggle">Ver más</button>
 				</div>
 			</div>
 		</div>
@@ -89,50 +106,6 @@
 		color: var(--color-text-light);
 	}
 
-	.experience-side {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 2rem;
-	}
-
-	.experience-signs {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.sign {
-		font-family: var(--font-display);
-		font-size: var(--font-size-lg);
-		font-weight: 700;
-		text-transform: uppercase;
-		background-color: var(--color-surface-dark);
-		color: var(--color-text-light);
-		padding: 0.75rem 1.5rem;
-		border: 1px solid rgba(242, 240, 234, 0.2);
-		transform: rotate(-2deg);
-		display: inline-block;
-	}
-
-	.sign:nth-child(2) {
-		transform: rotate(1deg);
-		margin-left: 1rem;
-	}
-
-	.sign:nth-child(3) {
-		transform: rotate(-1deg);
-		margin-left: 0.5rem;
-	}
-
-	.experience-motto {
-		font-family: var(--font-body);
-		font-size: var(--font-size-sm);
-		color: var(--color-text-light-muted);
-		text-align: right;
-		line-height: 1.6;
-	}
-
 	.experience-timeline {
 		position: relative;
 		padding-left: 3rem;
@@ -153,6 +126,111 @@
 		margin-bottom: 3rem;
 	}
 
+	.timeline-item-current {
+		margin-bottom: 3rem;
+		position: relative;
+		opacity: 1;
+	}
+
+	.timeline-item-current .timeline-dot {
+		background-color: var(--color-acid);
+		border-color: var(--color-acid);
+		box-shadow: 0 0 8px var(--color-acid), 0 0 16px var(--color-acid);
+	}
+
+	.timeline-item-current .timeline-company {
+		color: var(--color-acid);
+		font-size: var(--font-size-3xl);
+		transform: rotate(-1.5deg);
+		display: inline-block;
+	}
+
+	.timeline-role-row {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.timeline-badge {
+		font-family: var(--font-body);
+		font-size: var(--font-size-xs);
+		color: var(--color-text-light-muted);
+		padding: 0.2rem 0.5rem;
+		font-weight: 700;
+		display: inline-block;
+		transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+	}
+
+	.timeline-item-current:hover .timeline-badge {
+		transform: rotate(-5deg);
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+	}
+
+	.timeline-logo {
+		display: none;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 450px;
+		opacity: 0;
+		transition: opacity var(--transition-fast);
+		pointer-events: none;
+	}
+
+	@media (min-width: 900px) {
+		.timeline-item-current {
+			padding-right: 340px;
+		}
+
+		.timeline-item-current:hover .timeline-logo {
+			display: block;
+			opacity: 1;
+		}
+	}
+
+	.experience-timeline .timeline-item:not(.timeline-item-current) {
+		opacity: 0.6;
+		transition: opacity var(--transition-fast);
+	}
+
+	.experience-timeline .timeline-item:not(.timeline-item-current):hover {
+		opacity: 1;
+	}
+
+	.timeline-header {
+		margin-bottom: 0.5rem;
+	}
+
+	.timeline-location {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		margin-bottom: 1rem;
+	}
+
+	.timeline-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.timeline-list li {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-light-muted);
+		margin-bottom: 0.25rem;
+		padding-left: 1rem;
+		position: relative;
+	}
+
+	.timeline-list li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: var(--color-acid);
+	}
+
 	.timeline-dot {
 		position: absolute;
 		left: -3rem;
@@ -171,6 +249,23 @@
 		text-transform: uppercase;
 		color: var(--color-text-light);
 		margin-bottom: 0.5rem;
+		transition: transform var(--transition-fast);
+	}
+
+	.timeline-item:nth-child(1):hover .timeline-company {
+		transform: rotate(-3deg);
+	}
+
+	.timeline-item:nth-child(2):hover .timeline-company {
+		transform: rotate(1.5deg);
+	}
+
+	.timeline-item:nth-child(3):hover .timeline-company {
+		transform: rotate(-1.5deg);
+	}
+
+	.timeline-item:nth-child(4):hover .timeline-company {
+		transform: rotate(2deg);
 	}
 
 	.timeline-role {
@@ -185,6 +280,34 @@
 		color: var(--color-text-light-muted);
 		line-height: 1.6;
 		max-width: 500px;
+	}
+
+	.timeline-details {
+		display: none;
+		margin-top: 0.75rem;
+	}
+
+	.timeline-item.expanded .timeline-details {
+		display: block;
+	}
+
+	.timeline-toggle {
+		background: none;
+		border: none;
+		color: var(--color-acid);
+		font-family: var(--font-body);
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		cursor: pointer;
+		padding: 0;
+		margin-top: 0.5rem;
+		transition: opacity var(--transition-fast);
+	}
+
+	.timeline-toggle:hover {
+		opacity: 0.8;
 	}
 
 	.experience-footer {
@@ -207,18 +330,6 @@
 		.experience .container {
 			padding: 3rem 2rem;
 		}
-
-		.experience-header {
-			flex-direction: column;
-		}
-
-		.experience-side {
-			align-items: flex-start;
-		}
-
-		.experience-motto {
-			text-align: left;
-		}
 	}
 
 	@media (max-width: 600px) {
@@ -237,10 +348,15 @@
 		.timeline-company {
 			font-size: var(--font-size-xl);
 		}
-
-		.sign {
-			font-size: var(--font-size-md);
-			padding: 0.5rem 1rem;
-		}
 	}
 </style>
+
+<script>
+	document.querySelectorAll('.timeline-toggle').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const item = btn.closest('.timeline-item');
+			const isExpanded = item.classList.toggle('expanded');
+			btn.textContent = isExpanded ? 'Ver menos' : 'Ver más';
+		});
+	});
+</script>
