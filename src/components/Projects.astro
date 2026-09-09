@@ -17,63 +17,58 @@
 			</div>
 		</div>
 		<div class="projects-grid">
-			<article class="project-card">
+			<article class="project-card project-card-acid">
 				<div class="project-image project-image-acid">
 					<div class="project-image-content">
-						<span class="project-image-text">FANTASY<br />SPORTS<br />DATA<br />USERS</span>
+						<span class="project-image-text">RESERVA<br />GIJÓN</span>
 					</div>
 				</div>
-				<h3 class="project-title">APLICACIONES WEB</h3>
-				<p class="project-description">Desarrollo de aplicaciones web a medida, PHP, bases de datos y experiencias para usuarios reales.</p>
+				<div class="project-title-row">
+					<h3 class="project-title">RESERVA GIJÓN</h3>
+					<a href="#" class="project-btn project-btn-acid">VER MÁS <span class="arrow">→</span></a>
+				</div>
+				<p class="project-client">Ayuntamiento de Gijón</p>
+				<p class="project-description">Plataforma web y APP móvil para gestión integral de reservas y dinamización turística. Integración de Visit Gijón Card.</p>
 				<div class="project-tags">
-					<span class="tag">#php</span>
-					<span class="tag">#web</span>
-					<span class="tag">#deporte</span>
-					<span class="tag">#datos</span>
+					<span class="tag">App Móvil</span>
+					<span class="tag">Motor Reserva</span>
+					<span class="tag">Visit Gijón Card</span>
 				</div>
 			</article>
-			<article class="project-card">
+			<article class="project-card project-card-dark">
 				<div class="project-image project-image-dark">
 					<div class="project-image-content">
-						<span class="project-image-text">DASHBOARD<br />ANALYTICS</span>
+						<span class="project-image-text">TURISMO<br />NAVARRA</span>
 					</div>
 				</div>
-				<h3 class="project-title">GESTIÓN Y ERP</h3>
-				<p class="project-description">Soluciones de gestión, ERP y herramientas internas para optimizar procesos y equipos.</p>
+				<div class="project-title-row">
+					<h3 class="project-title">TURISMO NAVARRA</h3>
+					<a href="#" class="project-btn project-btn-dark">VER MÁS <span class="arrow">→</span></a>
+				</div>
+				<p class="project-client">Gobierno de Navarra / Nasertic</p>
+				<p class="project-description">Portal livenavarra.com. Centralización de alojamientos, actividades y patrimonio cultural con canal único de reservas.</p>
 				<div class="project-tags">
-					<span class="tag">#erp</span>
-					<span class="tag">#crm</span>
-					<span class="tag">#procesos</span>
-					<span class="tag">#automatización</span>
+					<span class="tag">Marketplace Regional</span>
+					<span class="tag">Turismo Navarra</span>
+					<span class="tag">Nasertic</span>
 				</div>
 			</article>
-			<article class="project-card">
-				<div class="project-image project-image-dark">
+			<article class="project-card project-card-blue">
+				<div class="project-image project-image-blue">
 					<div class="project-image-content">
-						<span class="project-image-text">CORPORATE<br />WEB</span>
+						<span class="project-image-text">PROYECTO<br />ÑTUR</span>
 					</div>
 				</div>
-				<h3 class="project-title">WEBS CORPORATIVAS</h3>
-				<p class="project-description">Diseño y desarrollo de sitios corporativos, CMS, SEO y una imagen que transmite confianza.</p>
-				<div class="project-tags">
-					<span class="tag">#cms</span>
-					<span class="tag">#diseño</span>
-					<span class="tag">#seo</span>
-					<span class="tag">#empresa</span>
+				<div class="project-title-row">
+					<h3 class="project-title">PROYECTO ÑTUR</h3>
+					<a href="#" class="project-btn project-btn-blue">VER MÁS <span class="arrow">→</span></a>
 				</div>
-			</article>
-			<article class="project-card">
-				<div class="project-image project-image-acid">
-					<div class="project-image-content">
-						<span class="project-image-text">AUTOMATE<br />SIMPLIFY<br />IMPROVE</span>
-					</div>
-				</div>
-				<h3 class="project-title">AUTOMATIZACIÓN</h3>
-				<p class="project-description">Integraciones, scripts y automatización de tareas para ahorrar tiempo y evitar errores.</p>
+				<p class="project-client">Fundetec</p>
+				<p class="project-description">Impulso TIC en turismo rural. Modelo de gestión avanzado para pymes y transformación digital del sector.</p>
 				<div class="project-tags">
-					<span class="tag">#integraciones</span>
-					<span class="tag">#scripts</span>
-					<span class="tag">#apis</span>
+					<span class="tag">Turismo Rural</span>
+					<span class="tag">Innovación TIC</span>
+					<span class="tag">Fundetec</span>
 				</div>
 			</article>
 		</div>
@@ -191,7 +186,8 @@
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
-		padding-bottom: 1rem;
+		padding: 1.5rem 0 1rem 0;
+		justify-content: center;
 	}
 
 	.projects-grid::-webkit-scrollbar {
@@ -199,25 +195,140 @@
 	}
 
 	.projects-grid::-webkit-scrollbar-track {
-		background: var(--color-surface-dark);
+		background: transparent;
 	}
 
 	.projects-grid::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
+
+	.projects-grid:hover::-webkit-scrollbar-thumb {
 		background: var(--color-text-light-muted);
 	}
 
 	.project-card {
-		flex: 0 0 280px;
+		flex: 0 0 calc((100% - 2rem) / 3);
+		max-width: 420px;
+		min-width: 280px;
 		scroll-snap-align: start;
-	}
-
-	.project-card {
 		border: 1px solid rgba(242, 240, 234, 0.15);
-		transition: border-color var(--transition-fast);
+		transition: transform var(--transition-fast), border-color var(--transition-fast), opacity var(--transition-fast);
 	}
 
-	.project-card:hover {
+	.projects-grid:hover .project-card {
+		opacity: 0.5;
+	}
+
+	.projects-grid .project-card:hover {
+		opacity: 1;
+	}
+
+	.project-card:first-child {
+		margin-left: 1rem;
+	}
+
+	.project-card:last-child {
+		margin-right: 1rem;
+	}
+
+	.project-card-acid:hover {
 		border-color: var(--color-acid);
+		transform: scale(1.03);
+		box-shadow: 0 0 8px var(--color-acid), 0 0 20px rgba(215, 248, 33, 0.3);
+	}
+
+	.project-card-dark:hover {
+		border-color: var(--color-text-light);
+		transform: scale(1.03);
+		box-shadow: 0 0 8px var(--color-text-light), 0 0 20px rgba(242, 240, 234, 0.2);
+	}
+
+	.project-card-blue:hover {
+		border-color: var(--color-electric-blue);
+		transform: scale(1.03);
+		box-shadow: 0 0 8px var(--color-electric-blue), 0 0 20px rgba(72, 39, 253, 0.3);
+	}
+
+	.project-title-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		padding: 0.75rem 0.75rem 0.25rem;
+	}
+
+	.project-btn {
+		font-family: var(--font-body);
+		font-size: var(--font-size-xs);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		padding: 0.5rem 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		flex-shrink: 0;
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+	}
+
+	.project-btn .arrow {
+		transition: transform var(--transition-fast);
+	}
+
+	.project-btn:hover .arrow {
+		transform: translateX(4px);
+	}
+
+	.project-btn-acid {
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+	}
+
+	.project-btn-acid:hover {
+		transform: translate(-2px, -2px) rotate(-2deg);
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+		box-shadow: 6px 6px 0 var(--color-acid);
+	}
+
+	.project-btn-dark {
+		background-color: var(--color-text-light-muted);
+		color: var(--color-text-dark);
+	}
+
+	.project-btn-dark:hover {
+		transform: translate(-2px, -2px) rotate(1.5deg);
+		background-color: var(--color-text-dark);
+		color: var(--color-text-light);
+		box-shadow: 6px 6px 0 var(--color-text-light);
+	}
+
+	.project-btn-blue {
+		background-color: var(--color-electric-blue);
+		color: var(--color-text-light);
+	}
+
+	.project-btn-blue:hover {
+		transform: translate(-2px, -2px) rotate(-1deg);
+		background-color: var(--color-acid);
+		color: var(--color-text-dark);
+		box-shadow: 6px 6px 0 var(--color-electric-blue);
+	}
+
+	.project-client {
+		font-size: var(--font-size-xs);
+		color: var(--color-acid);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		padding: 0.25rem 0.75rem 0.5rem;
+	}
+
+	.project-card-dark .project-client {
+		color: var(--color-text-light-muted);
+	}
+
+	.project-card-blue .project-client {
+		color: var(--color-electric-blue);
 	}
 
 	.project-image {
@@ -232,6 +343,14 @@
 
 	.project-image-dark {
 		background-color: var(--color-surface-dark);
+	}
+
+	.project-image-blue {
+		background-color: var(--color-electric-blue);
+	}
+
+	.project-image-blue .project-image-text {
+		color: var(--color-text-light);
 	}
 
 	.project-image-content {
@@ -263,7 +382,7 @@
 		font-size: var(--font-size-lg);
 		font-weight: 700;
 		text-transform: uppercase;
-		padding: 0.75rem 0.75rem 0.25rem;
+		padding: 0;
 	}
 
 	.project-description {
@@ -278,6 +397,17 @@
 		flex-wrap: wrap;
 		gap: 0.4rem;
 		padding: 0.75rem;
+	}
+
+	.tag {
+		font-family: var(--font-body);
+		font-size: 0.65rem;
+		background: linear-gradient(135deg, rgba(242, 240, 234, 0.95) 0%, rgba(220, 218, 212, 0.95) 100%);
+		color: var(--color-text-dark);
+		padding: 0.35rem 0.6rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		border: 1px solid rgba(242, 240, 234, 0.3);
 	}
 
 	@media (max-width: 600px) {
@@ -295,6 +425,7 @@
 
 		.project-card {
 			flex: 0 0 240px;
+			min-width: 240px;
 		}
 	}
 </style>
