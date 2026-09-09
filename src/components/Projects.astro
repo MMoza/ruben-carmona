@@ -18,10 +18,8 @@
 		</div>
 		<div class="projects-grid">
 			<article class="project-card project-card-acid">
-				<div class="project-image project-image-acid">
-					<div class="project-image-content">
-						<span class="project-image-text">RESERVA<br />GIJÓN</span>
-					</div>
+				<div class="project-image">
+					<img src="/images/01-gijon.png" alt="Reserva Gijón" />
 				</div>
 				<div class="project-title-row">
 					<h3 class="project-title">RESERVA GIJÓN</h3>
@@ -36,10 +34,8 @@
 				</div>
 			</article>
 			<article class="project-card project-card-dark">
-				<div class="project-image project-image-dark">
-					<div class="project-image-content">
-						<span class="project-image-text">TURISMO<br />NAVARRA</span>
-					</div>
+				<div class="project-image">
+					<img src="/images/02-navarra.png" alt="Turismo Navarra" />
 				</div>
 				<div class="project-title-row">
 					<h3 class="project-title">TURISMO NAVARRA</h3>
@@ -54,10 +50,8 @@
 				</div>
 			</article>
 			<article class="project-card project-card-blue">
-				<div class="project-image project-image-blue">
-					<div class="project-image-content">
-						<span class="project-image-text">PROYECTO<br />ÑTUR</span>
-					</div>
+				<div class="project-image">
+					<img src="/images/03-ntur.png" alt="Proyecto Ñtur" />
 				</div>
 				<div class="project-title-row">
 					<h3 class="project-title">PROYECTO ÑTUR</h3>
@@ -337,44 +331,11 @@
 		position: relative;
 	}
 
-	.project-image-acid {
-		background-color: var(--color-acid);
-	}
-
-	.project-image-dark {
-		background-color: var(--color-surface-dark);
-	}
-
-	.project-image-blue {
-		background-color: var(--color-electric-blue);
-	}
-
-	.project-image-blue .project-image-text {
-		color: var(--color-text-light);
-	}
-
-	.project-image-content {
+	.project-image img {
 		width: 100%;
 		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.project-image-text {
-		font-family: var(--font-display);
-		font-size: var(--font-size-lg);
-		font-weight: 700;
-		text-transform: uppercase;
-		line-height: 1.1;
-	}
-
-	.project-image-acid .project-image-text {
-		color: var(--color-text-dark);
-	}
-
-	.project-image-dark .project-image-text {
-		color: var(--color-text-light-muted);
+		object-fit: cover;
+		display: block;
 	}
 
 	.project-title {
