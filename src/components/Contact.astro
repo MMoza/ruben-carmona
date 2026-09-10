@@ -3,34 +3,52 @@
 
 <section id="contacto" class="contact">
 	<div class="container">
+		<div class="contact-header">
+			<span class="section-number">// 05</span>
+			<h2 class="section-title">CONTACTO</h2>
+		</div>
 		<div class="contact-grid">
 			<div class="contact-col-1">
-				<span class="section-number">// 05</span>
-				<h2 class="contact-cta">¿HABLAMOS?</h2>
+				<h3 class="contact-cta">¿HABLAMOS?</h3>
 				<p class="contact-description" id="typewriter-text"></p>
 			</div>
 			<div class="contact-col-2">
 				<div class="contact-info">
 					<a href="mailto:mort4delo@gmail.com" class="contact-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<rect x="2" y="4" width="20" height="16" rx="2" />
-							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-						</svg>
-						<span>mort4delo@gmail.com</span>
+						<div class="contact-icon-box icon-acid">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="2" y="4" width="20" height="16" rx="2" />
+								<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+							</svg>
+						</div>
+						<div class="contact-item-text">
+							<span class="contact-item-label">EMAIL</span>
+							<span class="contact-item-value">mort4delo@gmail.com</span>
+						</div>
 					</a>
 					<a href="tel:+34657655482" class="contact-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-						</svg>
-						<span>+34 657 655 482</span>
+						<div class="contact-icon-box icon-blue">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+							</svg>
+						</div>
+						<div class="contact-item-text">
+							<span class="contact-item-label">TELÉFONO</span>
+							<span class="contact-item-value">+34 657 655 482</span>
+						</div>
 					</a>
 					<a href="https://www.linkedin.com/in/rubén-carmona-domínguez-17a10323/" class="contact-item" target="_blank" rel="noopener">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-							<rect x="2" y="9" width="4" height="12" />
-							<circle cx="4" cy="4" r="2" />
-						</svg>
-						<span>LinkedIn</span>
+						<div class="contact-icon-box icon-acid">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+								<rect x="2" y="9" width="4" height="12" />
+								<circle cx="4" cy="4" r="2" />
+							</svg>
+						</div>
+						<div class="contact-item-text">
+							<span class="contact-item-label">LINKEDIN</span>
+							<span class="contact-item-value">LinkedIn</span>
+						</div>
 					</a>
 				</div>
 				<a href="mailto:mort4delo@gmail.com" class="cta-button">
@@ -59,11 +77,45 @@
 		padding: 5rem 2rem;
 	}
 
+	.contact-header {
+		margin-bottom: 3rem;
+	}
+
+	.contact .section-number {
+		color: var(--color-text-light-muted);
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.contact .section-title {
+		font-family: var(--font-display);
+		font-size: clamp(3rem, 6vw, 5rem);
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: var(--color-text-light);
+	}
+
 	.contact-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
-		align-items: start;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.contact-col-1, .contact-col-2 {
+		width: 100%;
+		max-width: 500px;
+		text-align: center;
+	}
+
+	.contact-col-2 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.contact-cta {
@@ -81,7 +133,8 @@
 		color: var(--color-text-light-muted);
 		line-height: 1.8;
 		max-width: 400px;
-		min-height: 3.6em;
+		min-height: 5.4em;
+		margin: 0 auto;
 	}
 
 	.contact-description::after {
@@ -107,21 +160,79 @@
 		color: var(--color-text-light);
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: 1.5rem;
 		transition: color var(--transition-fast);
+		text-decoration: none;
 	}
 
-	.contact-item svg {
+	.contact-icon-box {
+		width: 60px;
+		height: 60px;
+		border: 1px solid rgba(242, 240, 234, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		flex-shrink: 0;
-		transition: stroke var(--transition-fast);
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
 	}
 
-	.contact-item:hover {
+	.icon-acid svg {
 		color: var(--color-acid);
 	}
 
-	.contact-item:hover svg {
-		stroke: var(--color-acid);
+	.icon-blue svg {
+		color: var(--color-electric-blue);
+	}
+
+	.icon-acid:hover, .contact-item:hover .icon-acid {
+		transform: translate(-2px, -2px) rotate(-2deg);
+		background-color: var(--color-acid);
+		border-color: var(--color-acid);
+		box-shadow: 4px 4px 0 var(--color-electric-blue);
+	}
+
+	.icon-acid:hover svg, .contact-item:hover .icon-acid svg {
+		color: var(--color-text-dark);
+	}
+
+	.icon-blue:hover, .contact-item:hover .icon-blue {
+		transform: translate(-2px, -2px) rotate(1.5deg);
+		background-color: var(--color-electric-blue);
+		border-color: var(--color-electric-blue);
+		box-shadow: 4px 4px 0 var(--color-acid);
+	}
+
+	.icon-blue:hover svg, .contact-item:hover .icon-blue svg {
+		color: var(--color-text-light);
+	}
+
+	.contact-item-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		text-align: left;
+	}
+
+	.contact-item-label {
+		font-family: var(--font-body);
+		font-size: var(--font-size-xs);
+		color: var(--color-text-light-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.contact-item-value {
+		font-family: var(--font-body);
+		font-size: var(--font-size-md);
+		color: var(--color-text-light);
+		text-decoration: underline;
+		text-decoration-color: rgba(242, 240, 234, 0.3);
+		text-underline-offset: 4px;
+		transition: text-decoration-color var(--transition-fast);
+	}
+
+	.contact-item:hover .contact-item-value {
+		text-decoration-color: var(--color-acid);
 	}
 
 	.contact .cta-button {
@@ -168,7 +279,18 @@
 			padding: 3rem 1rem;
 		}
 
-		.contact-cta {
+	.contact-title {
+		font-family: var(--font-display);
+		font-size: clamp(3rem, 6vw, 5rem);
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: var(--color-text-light);
+		margin-bottom: 1rem;
+	}
+
+	.contact-cta {
 			font-size: var(--font-size-3xl);
 		}
 	}
