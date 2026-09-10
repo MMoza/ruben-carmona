@@ -3,38 +3,39 @@
 
 <section id="contacto" class="contact">
 	<div class="container">
-		<div class="contact-inner">
-			<div class="contact-left">
+		<div class="contact-grid">
+			<div class="contact-col-1">
 				<span class="section-number">// 05</span>
-				<h2 class="contact-title">CONTACTO</h2>
-				<h3 class="contact-cta">¿HABLAMOS?</h3>
+				<h2 class="contact-cta">¿HABLAMOS?</h2>
+				<p class="contact-description" id="typewriter-text"></p>
 			</div>
-			<div class="contact-right">
-				<p class="contact-description">
-					Cuéntame tu proyecto, una idea o simplemente saluda. Estoy siempre abierto a nuevas oportunidades.
-				</p>
+			<div class="contact-col-2">
 				<div class="contact-info">
 					<a href="mailto:mort4delo@gmail.com" class="contact-item">
-						<span class="contact-icon">✉</span> mort4delo@gmail.com
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="2" y="4" width="20" height="16" rx="2" />
+							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+						</svg>
+						<span>mort4delo@gmail.com</span>
 					</a>
 					<a href="tel:+34657655482" class="contact-item">
-						<span class="contact-icon"></span> +34 657 655 482
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+						</svg>
+						<span>+34 657 655 482</span>
 					</a>
 					<a href="https://www.linkedin.com/in/rubén-carmona-domínguez-17a10323/" class="contact-item" target="_blank" rel="noopener">
-						<span class="contact-icon">in</span> LinkedIn
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+							<rect x="2" y="9" width="4" height="12" />
+							<circle cx="4" cy="4" r="2" />
+						</svg>
+						<span>LinkedIn</span>
 					</a>
 				</div>
 				<a href="mailto:mort4delo@gmail.com" class="cta-button">
 					Contactar <span class="arrow">→</span>
 				</a>
-			</div>
-			<div class="contact-visual">
-				<p class="contact-handwritten">
-					Ideas<br />
-					Proyectos<br />
-					Personas <span class="arrow">→</span>
-				</p>
-				<img src="/images/logo-line.png" alt="" class="contact-line" />
 			</div>
 		</div>
 	</div>
@@ -55,23 +56,14 @@
 		z-index: 1;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 4rem 2rem;
+		padding: 5rem 2rem;
 	}
 
-	.contact-inner {
+	.contact-grid {
 		display: grid;
-		grid-template-columns: 1fr 1fr auto;
+		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
 		align-items: start;
-	}
-
-	.contact-title {
-		font-family: var(--font-display);
-		font-size: var(--font-size-3xl);
-		font-weight: 700;
-		text-transform: uppercase;
-		color: var(--color-text-light);
-		margin-bottom: 1rem;
 	}
 
 	.contact-cta {
@@ -80,41 +72,56 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		color: var(--color-acid);
+		line-height: 1;
+		margin-bottom: 1.5rem;
 	}
 
 	.contact-description {
 		font-size: var(--font-size-md);
 		color: var(--color-text-light-muted);
 		line-height: 1.8;
-		margin-bottom: 2rem;
-		max-width: 350px;
+		max-width: 400px;
+		min-height: 3.6em;
+	}
+
+	.contact-description::after {
+		content: '|';
+		animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0; }
 	}
 
 	.contact-info {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		margin-bottom: 2rem;
+		gap: 1.5rem;
+		margin-bottom: 2.5rem;
 	}
 
 	.contact-item {
 		font-family: var(--font-body);
-		font-size: var(--font-size-sm);
-		color: var(--color-text-light-muted);
+		font-size: var(--font-size-md);
+		color: var(--color-text-light);
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 1rem;
 		transition: color var(--transition-fast);
+	}
+
+	.contact-item svg {
+		flex-shrink: 0;
+		transition: stroke var(--transition-fast);
 	}
 
 	.contact-item:hover {
 		color: var(--color-acid);
 	}
 
-	.contact-icon {
-		font-size: var(--font-size-lg);
-		width: 24px;
-		text-align: center;
+	.contact-item:hover svg {
+		stroke: var(--color-acid);
 	}
 
 	.contact .cta-button {
@@ -126,12 +133,12 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
-		padding: 0.75rem 1.5rem;
+		padding: 1rem 2rem;
 		background-color: var(--color-electric-blue);
 		color: var(--color-text-light);
 		border: none;
 		cursor: pointer;
-		transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+		transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
 	}
 
 	.contact .cta-button:hover {
@@ -149,68 +156,38 @@
 		transform: translateX(4px);
 	}
 
-	.contact-visual {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-	}
-
-	.contact-handwritten {
-		font-family: var(--font-display);
-		font-size: var(--font-size-xl);
-		font-weight: 700;
-		text-transform: uppercase;
-		color: var(--color-text-light);
-		transform: rotate(3deg);
-		line-height: 1.4;
-	}
-
-	.contact-handwritten .arrow {
-		color: var(--color-acid);
-	}
-
-	.contact-line {
-		width: 150px;
-		margin-top: 2rem;
-		opacity: 0.5;
-	}
-
-	@media (max-width: 1000px) {
-		.contact .container {
-			padding: 3rem 2rem;
-		}
-
-		.contact-inner {
-			grid-template-columns: 1fr 1fr;
+	@media (max-width: 900px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
 			gap: 3rem;
-		}
-
-		.contact-visual {
-			grid-column: 1 / -1;
-			flex-direction: row;
-			justify-content: flex-end;
-			gap: 2rem;
 		}
 	}
 
 	@media (max-width: 600px) {
 		.contact .container {
-			padding: 2rem 1rem;
-		}
-
-		.contact-inner {
-			grid-template-columns: 1fr;
-			gap: 2rem;
+			padding: 3rem 1rem;
 		}
 
 		.contact-cta {
 			font-size: var(--font-size-3xl);
 		}
-
-		.contact-visual {
-			flex-direction: column;
-			align-items: flex-start;
-		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const text = "Cuéntame tu proyecto, una idea o simplemente saluda. Estoy siempre abierto a nuevas oportunidades.";
+		const element = document.getElementById('typewriter-text');
+		if (!element) return;
+
+		let index = 0;
+		function type() {
+			if (index < text.length) {
+				element.textContent += text.charAt(index);
+				index++;
+				setTimeout(type, 30);
+			}
+		}
+		type();
+	});
+</script>
