@@ -41,9 +41,9 @@ node --version
 Se recomienda usar las siguientes herramientas para una experiencia de desarrollo óptima:
 
 ### **OpenCode**
-IDE moderno y ligero, perfecto para proyectos web.
-- [Descargar OpenCode](https://www.opencode.app/)
-- Ideal para quienes quieren una alternativa ligera
+Agente de IA de código abierto para asistencia en desarrollo.
+- [OpenCode.ai](https://opencode.ai/)
+- Ideal para obtener ayuda con generación de código y refactorización
 
 ### **Warp**
 Terminal moderna y potente con características avanzadas.
